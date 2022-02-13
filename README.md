@@ -35,16 +35,8 @@ The Best HPs we got for this were:
 
 All screenshots of the completed tranining jobs, log metrics & deployed endpoint are present in the `screenshots` folder in the repository
 
-Remember that your README should:
-- Include a screenshot of completed training jobs
-- Logs metrics during the training process
-- Tune at least two hyperparameters
-- Retrieve the best best hyperparameters from all your training jobs
-
 ## Debugging and Profiling
 For this, we use the SageMaker Debugger and Profiler, to give us more insights about our training process. We have added the hooks in `train_model.py` to use these. In the `train_and_deploy.ipynb` we define the rules for the debugger and profiler, and also to generate the Profiler Report which is present in the `ProfilerReport` folder in the Repo. 
-
-**TODO**: Give an overview of how you performed model debugging and profiling in Sagemaker
 
 ### Results
 
@@ -53,11 +45,6 @@ Some Valuable Insights from Debugger and Profiler were:
 - We could try to train for more epochs to get more data, and decide if loss is decreasing in the further epochs
 - We see from the Profiler reports that we are under utilising the GPU
 - We also see from the Profiler Reports that we can try higher batch sizes
-
-**TODO**: What are the results/insights did you get by profiling/debugging your model?
-
-**TODO** Remember to provide the profiler html/pdf file in your submission.
-
 
 ## Model Deployment
 
@@ -69,6 +56,3 @@ See the Deployment section in `train_and_deploy.ipynb` notebook for the deployme
 - We use predictor.predict() method to get the most likely dog class from the model
 - We can then check if the class predicted is accurate for the given image input
 
-**TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
-
-**TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
