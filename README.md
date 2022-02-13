@@ -1,17 +1,28 @@
 # Image Classification using AWS SageMaker
 
-Use AWS Sagemaker to train a pretrained model that can perform image classification by using the Sagemaker profiling, debugger, hyperparameter tuning and other good ML engineering practices. We have used the Dogs Breed Classification Dataset for the same
+Use AWS Sagemaker to train a pretrained model that can perform image classification by using the Sagemaker profiling, debugger, hyperparameter tuning and other good ML engineering practices. We have used the Dogs Breed Classification Dataset for this task.
+
+## Files and Folders in this Repo
+
+- The main notebook is the `train_and_deploy.ipynb` which has the entire project flow
+- `hpo-gpu.py` is the script used for Hyper Parameter Tuning used by the `train_and_deploy.ipynb`
+- `train_model.py` is the script used for Training with Debugger & Profiler used by the `train_and_deploy.ipynb`
+- `inference.py` is the script helping create a Pytorch model from the best trained model, being used by the `train_and_deploy.ipynb`
+- `dog_test.txt`, `dog_train.txt`, `dog_valid.txt` & `dog_train_folders.txt` are text files created by me, helping to check if all Dogs Breed Dataset files have been successfully uploaded to the S3 Bucket
+- `ProfilerReport` Folder contains the Profiler Report in HTML, the corresponding Jupyter NB which generated it, and another folder called `profile-reports` which contains JSON files for Profiler Outputs
+- `screenshots` Folder contains all relevant screenshots on the training, hyper paramter tuning and deploying the model
+
 
 ## Project Set Up and Installation
 1. Enter AWS through the gateway in the course and open SageMaker Studio. 
-2. Download the starter files.
-3. Download/Make the dataset available in your S3.
+2. Download the starter files from this repo
+3. Download/Make the dataset available in your S3
 4. Open the `train_and_deploy.ipynb` and follow the steps there. You can verify if data is uploaded correctly also with this. 
 5. The supporting files `hpo_gpu.py` and `train_model.py` & `inference.py` need to be in the same directory as train_and_deploy notebook
 
 ## Dataset
-The provided dataset is the dogbreed classification dataset which can be found in the link in `train_and_deploy.ipynb`
-This project is designed to be dataset independent so if there is a dataset that is more interesting or relevant to your work, you are welcome to use it to complete the project.
+- The provided dataset is the dogbreed classification dataset which can be found at the link https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip
+- This project is designed to be dataset independent so if there is a dataset that is more interesting or relevant to your work, you are welcome to use it to complete the project.
 
 ### Access
 Upload the data to an S3 bucket through the AWS Gateway so that SageMaker has access to the data. 
