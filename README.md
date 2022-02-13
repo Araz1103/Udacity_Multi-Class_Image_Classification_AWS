@@ -11,6 +11,7 @@ Use AWS Sagemaker to train a pretrained model that can perform image classificat
 - `dog_test.txt`, `dog_train.txt`, `dog_valid.txt` & `dog_train_folders.txt` are text files created by me, helping to check if all Dogs Breed Dataset files have been successfully uploaded to the S3 Bucket
 - `ProfilerReport` Folder contains the Profiler Report in HTML, the corresponding Jupyter NB which generated it, and another folder called `profile-reports` which contains JSON files for Profiler Outputs
 - `screenshots` Folder contains all relevant screenshots on the training, hyper paramter tuning and deploying the model
+- Profiler Plots I - III are files being used by `train_and_deploy.ipynb`, since they may not be directly visible in the code cell output. These plots are made from the JSON files present in the `profile-reports` folder. 
 
 
 ## Project Set Up and Installation
