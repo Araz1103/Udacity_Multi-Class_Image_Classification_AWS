@@ -61,10 +61,14 @@ Some Valuable Insights from Debugger and Profiler were:
 
 ## Model Deployment
 
-We use the `inference.py` script, to help generate a Pytorch model for Image Prediction, from the Model we have gotten with training with the best Hyper Parameters. We create an endpoint with this Pytorch model on a single ml.t2.medium instance
+See the Deployment section in `train_and_deploy.ipynb` notebook for the deployment code. 
+
+- We use the `inference.py` script, to help generate a Pytorch model for Image Prediction, from the Model we have gotten with training with the best Hyper Parameters.
+- We create an endpoint with this Pytorch model on a single ml.t2.medium instance. 
+- Then we fetch a sample input for querying from a hosted S3 Bucket.
+- We use predictor.predict() method to get the most likely dog class from the model
+- We can then check if the class predicted is accurate for the given image input
+
 **TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 **TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
-
-## Standout Suggestions
-**TODO (Optional):** This is where you can provide information about any standout suggestions that you have attempted.
